@@ -1,6 +1,8 @@
 import { useForm } from 'react-hook-form'
 import { gql, useMutation } from '@apollo/client'
 import { useNavigate } from 'react-router'
+import { Button, Input } from '@nextui-org/react'
+import { useTranslation } from 'react-i18next'
 
 // Define mutation
 const LOGIN_MUTATION = gql`
@@ -24,6 +26,8 @@ const LoginForm = () => {
     formState: { errors }
   } = useForm<Inputs>()
 
+  const { t } = useTranslation('global')
+
   const navigate = useNavigate()
   const [login, { loading, error }] = useMutation(LOGIN_MUTATION)
 
@@ -38,45 +42,32 @@ const LoginForm = () => {
       className="grid gap-y-4 p-8 rounded-b-xl shadow-lg"
       onSubmit={handleSubmit(onSubmit)}
     >
+      <h3 className="font-bold">{t('welcome')}</h3>
       <div className="flex flex-col gap-y-2">
-        <label htmlFor="login_email" className="text-sm">
-          Email *
-        </label>
-        <input
-          id="login_email"
+        <Input
           type="email"
-          className="border-b px-2 py-1 text-sm text-slate-700 outline-none"
+          label={t('email')}
+          validationState={errors.email ? 'invalid' : 'valid'}
+          errorMessage={errors.email ? t('error.email') : ''}
           {...register('email', { required: true })}
         />
-        {errors.email && (
-          <span className="text-xs text-red-800">This field is required</span>
-        )}
       </div>
 
       <div className="flex flex-col gap-y-2">
-        <label htmlFor="login_password" className="text-sm">
-          Password *
-        </label>
-        <input
-          id="login_password"
+        <Input
           type="password"
-          className="border-b px-2 py-1 text-sm text-slate-700 outline-none"
+          label={t('password')}
+          validationState={errors.password ? 'invalid' : 'valid'}
+          errorMessage={errors.password ? t('error.required') : ''}
           {...register('password', { required: true })}
         />
-        {errors.password && (
-          <span className="text-xs text-red-800">This field is required</span>
-        )}
       </div>
 
-      {error && <span className="text-xs text-red-800">{error.message}</span>}
+      {error && <span className="text-xs text-danger">{error.message}</span>}
 
-      <button
-        disabled={loading}
-        className="bg-sky-950 text-white rounded py-2 disabled:bg-slate-400"
-        type="submit"
-      >
-        Ingresar
-      </button>
+      <Button type="submit" isLoading={loading} color="primary">
+        {t('login')}
+      </Button>
     </form>
   )
 }

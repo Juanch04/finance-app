@@ -1,0 +1,13 @@
+{
+  "welcome": "¡Bienvenido a nuestra aplicación!",
+  "greeting": "¡Hola, {{name}}!",
+  "email": "Correo",
+  "password": "Contraseña",
+  "login": "Ingresar",
+  "spanish": "Español",
+  "english": "Ingles",
+  "error": {
+    "email": "Ingresa un email valido",
+    "required": "Este campo es obligatorio"
+  }
+}

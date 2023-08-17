@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import { withRouter } from 'storybook-addon-react-router-v6'
 
 import LoginForm from './index'
 
@@ -7,10 +8,7 @@ const meta = {
   component: LoginForm,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
-  parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-    layout: 'fullscreen'
-  }
+  decorators: [withRouter]
 } satisfies Meta<typeof LoginForm>
 
 export default meta
@@ -23,5 +21,3 @@ export const LoggedIn: Story = {
   //     }
   //   }
 }
-
-export const LoggedOut: Story = {}

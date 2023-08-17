@@ -1,3 +1,5 @@
+import { Button } from '@nextui-org/button'
+
 const DebtForm = () => {
   return (
     <form>
@@ -5,6 +7,8 @@ const DebtForm = () => {
         <label htmlFor="">Nombre de la deuda</label>
         <input type="text" />
       </div>
+
+      <Button>Click me</Button>
     </form>
   )
 }

@@ -7,14 +7,18 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
-    '@storybook/addon-mdx-gfsm'
+    '@storybook/addon-mdx-gfsm',
+    '@storybook/addon-styling',
+    'storybook-addon-react-router-v6',
+    'storybook-addon-apollo-client'
   ],
   framework: {
     name: '@storybook/react-vite',
     options: {}
   },
   docs: {
-    autodocs: 'tag'
+    autodocs: 'tag',
+    defaultName: 'Documentation'
   }
 }
 export default config
