@@ -12,7 +12,7 @@ import {
   Dropdown,
   DropdownItem,
   DropdownMenu,
-  DropdownTrigger
+  DropdownTrigger,
 } from '@nextui-org/react'
 
 const Header = () => {
@@ -21,7 +21,7 @@ const Header = () => {
 
   const labelsMap = {
     es: t('spanish') + ' 🇪🇸',
-    en: t('english') + ' 🇺🇸'
+    en: t('english') + ' 🇺🇸',
   }
 
   const selectedOptionValue = Array.from(selectedOption)[0]
@@ -34,7 +34,7 @@ const Header = () => {
     <Navbar>
       <NavbarBrand>
         {/* <AcmeLogo /> */}
-        <p className="font-bold text-inherit">Finance App</p>
+        <p className='font-bold text-inherit'>Finance App</p>
       </NavbarBrand>
       {/* <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
@@ -47,35 +47,35 @@ const Header = () => {
           <Link color="foreground">Integrations</Link>
         </NavbarItem>
       </NavbarContent> */}
-      <NavbarContent justify="end">
+      <NavbarContent justify='end'>
         <NavbarItem>
-          <ButtonGroup variant="flat">
+          <ButtonGroup variant='flat'>
             <Button>{labelsMap[selectedOptionValue]}</Button>
-            <Dropdown placement="bottom-end">
+            <Dropdown placement='bottom-end'>
               <DropdownTrigger>
                 <Button isIconOnly>🔽</Button>
               </DropdownTrigger>
               <DropdownMenu
                 disallowEmptySelection
-                aria-label="Merge options"
+                aria-label='Merge options'
                 selectedKeys={selectedOption}
-                selectionMode="single"
+                selectionMode='single'
                 onSelectionChange={setSelectedOption}
-                className="max-w-[300px]"
+                className='max-w-[300px]'
               >
-                <DropdownItem key="es">{labelsMap['es']}</DropdownItem>
-                <DropdownItem key="en">{labelsMap['en']}</DropdownItem>
+                <DropdownItem key='es'>{labelsMap['es']}</DropdownItem>
+                <DropdownItem key='en'>{labelsMap['en']}</DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </ButtonGroup>
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">
-          <Link to="/login" as={LinkRouter}>
+        <NavbarItem className='hidden lg:flex'>
+          <Link to='/login' as={LinkRouter}>
             Login
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" variant="flat">
+          <Button as={Link} color='primary' variant='flat'>
             Sign Up
           </Button>
         </NavbarItem>

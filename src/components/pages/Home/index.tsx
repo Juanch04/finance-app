@@ -4,7 +4,7 @@ import Layout from '../../templates/Layout'
 function Home() {
   return (
     <Layout>
-      <main className="container mx-auto max-w-screen-lg">
+      <main className='container mx-auto max-w-screen-lg'>
         <DebtForm></DebtForm>
       </main>
     </Layout>

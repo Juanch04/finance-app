@@ -1,10 +1,7 @@
 import type { Preview } from '@storybook/react'
 import { MockedProvider } from '@apollo/client/testing'
 
-import {
-  withThemeByClassName,
-  withThemeByDataAttribute
-} from '@storybook/addon-styling'
+import { withThemeByClassName, withThemeByDataAttribute } from '@storybook/addon-styling'
 
 /* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
 import '../src/index.css'
@@ -15,14 +12,14 @@ const preview: Preview = {
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/
-      }
+        date: /Date$/,
+      },
     },
     apolloClient: {
       MockedProvider,
-      globalMocks: []
+      globalMocks: [],
     },
-    layout: 'centered'
+    layout: 'centered',
   },
 
   decorators: [
@@ -31,19 +28,19 @@ const preview: Preview = {
     withThemeByClassName({
       themes: {
         light: 'light',
-        dark: 'dark'
+        dark: 'dark',
       },
-      defaultTheme: 'light'
+      defaultTheme: 'light',
     }),
     withThemeByDataAttribute({
       themes: {
         light: 'light',
-        dark: 'dark'
+        dark: 'dark',
       },
       defaultTheme: 'light',
-      attributeName: 'data-mode'
-    })
-  ]
+      attributeName: 'data-mode',
+    }),
+  ],
 }
 
 export default preview

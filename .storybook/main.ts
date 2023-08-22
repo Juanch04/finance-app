@@ -10,15 +10,15 @@ const config: StorybookConfig = {
     '@storybook/addon-mdx-gfsm',
     '@storybook/addon-styling',
     'storybook-addon-react-router-v6',
-    'storybook-addon-apollo-client'
+    'storybook-addon-apollo-client',
   ],
   framework: {
     name: '@storybook/react-vite',
-    options: {}
+    options: {},
   },
   docs: {
     autodocs: 'tag',
-    defaultName: 'Documentation'
-  }
+    defaultName: 'Documentation',
+  },
 }
 export default config

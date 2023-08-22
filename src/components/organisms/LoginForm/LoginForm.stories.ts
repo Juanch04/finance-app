@@ -8,7 +8,7 @@ const meta = {
   component: LoginForm,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
-  decorators: [withRouter]
+  decorators: [withRouter],
 } satisfies Meta<typeof LoginForm>
 
 export default meta

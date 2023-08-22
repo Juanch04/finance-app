@@ -7,8 +7,8 @@ const meta = {
   component: Footer,
   tags: ['autodocs'],
   parameters: {
-    layout: 'fullscreen'
-  }
+    layout: 'fullscreen',
+  },
 } satisfies Meta<typeof Footer>
 
 export default meta

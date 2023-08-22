@@ -6,7 +6,7 @@ import Home from '../components/pages/Home'
 const router = createBrowserRouter([
   {
     path: '/login',
-    element: <Login />
+    element: <Login />,
   },
   {
     path: '/',
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
       <ProtectedRoute>
         <Home />
       </ProtectedRoute>
-    )
-  }
+    ),
+  },
 ])
 
 export default router

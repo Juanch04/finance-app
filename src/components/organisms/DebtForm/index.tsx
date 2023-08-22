@@ -4,8 +4,8 @@ const DebtForm = () => {
   return (
     <form>
       <div>
-        <label htmlFor="">Nombre de la deuda</label>
-        <input type="text" />
+        <label htmlFor=''>Nombre de la deuda</label>
+        <input type='text' />
       </div>
 
       <Button>Click me</Button>

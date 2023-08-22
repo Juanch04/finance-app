@@ -5,7 +5,7 @@ import Button from './index'
 const meta = {
   title: 'Atoms/Button',
   component: Button,
-  tags: ['autodocs']
+  tags: ['autodocs'],
 } satisfies Meta<typeof Button>
 
 export default meta
@@ -16,6 +16,6 @@ export const Primary: Story = {
     label: 'Hello',
     primary: true,
     size: 'large',
-    rounded: 'full'
-  }
+    rounded: 'full',
+  },
 }

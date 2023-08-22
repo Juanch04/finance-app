@@ -6,12 +6,12 @@ import enTranslation from './locales/en.json'
 i18n.use(initReactI18next).init({
   resources: {
     es: { global: esTranslation },
-    en: { global: enTranslation }
+    en: { global: enTranslation },
   },
   lng: 'es',
   interpolation: {
-    escapeValue: false
-  }
+    escapeValue: false,
+  },
 })
 
 export default i18n

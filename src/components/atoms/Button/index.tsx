@@ -19,8 +19,7 @@ function getModeClasses(isPrimary: boolean) {
     : 'text-slate-700 bg-transparent border-slate-700'
 }
 
-const BASE_BUTTON_CLASSES =
-  'cursor-pointer border-2 font-bold leading-none inline-block'
+const BASE_BUTTON_CLASSES = 'cursor-pointer border-2 font-bold leading-none inline-block'
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   primary: boolean
