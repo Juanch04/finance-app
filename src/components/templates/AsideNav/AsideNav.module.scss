@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  min-height: calc(100vh - 64px);
+  height: 100%;
+
+  .body {
+    padding: 1rem;
+  }
+}
+
+/* @container sidebar (width <= 100px) {
+  .container {
+    .aside {
+      .nav {
+        background: red;
+      }
+    }
+  }
+} */

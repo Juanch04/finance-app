@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { PropsWithChildren, useMemo } from 'react'
 
 function getRoundedClass(rounded: string) {
   type ObjectType = { medium: string; full: string }
@@ -22,18 +22,18 @@ function getModeClasses(isPrimary: boolean) {
 const BASE_BUTTON_CLASSES = 'cursor-pointer border-2 font-bold leading-none inline-block'
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  primary: boolean
-  label: string
-  size: 'small' | 'medium' | 'large'
-  rounded: 'medium' | 'full' | 'none'
+  primary?: boolean
+  size?: 'small' | 'medium' | 'large'
+  rounded?: 'medium' | 'full' | 'none'
 }
-const Button: React.FC<Props> = ({
+const Button = ({
   primary = false,
   size = 'medium',
   rounded = 'full',
-  label,
+  children,
+  className,
   ...props
-}) => {
+}: PropsWithChildren<Props>) => {
   const computedClasses = useMemo(() => {
     const modeClass = getModeClasses(primary)
     const sizeClass = getSizeClasses(size)
@@ -43,8 +43,8 @@ const Button: React.FC<Props> = ({
   }, [primary, size, rounded])
 
   return (
-    <button className={`${BASE_BUTTON_CLASSES} ${computedClasses}`} {...props}>
-      {label}
+    <button className={`${BASE_BUTTON_CLASSES} ${computedClasses} ${className}`} {...props}>
+      {children}
     </button>
   )
 }
