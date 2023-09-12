@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #1d3557;
+    --secondary: #457b9d;
+    --tertiary: #a8dadc;
+    --error: #e63946;
+    --accent: #f1faee;
+  }
+}

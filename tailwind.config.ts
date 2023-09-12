@@ -14,6 +14,13 @@ export default {
       fontFamily: {
         sans: ['Lexend', defaultTheme.fontFamily.sans],
       },
+      colors: {
+        primary: 'var(--primary)',
+        secondary :'var(--secondary)',
+        tertiary :'var(--tertiary)',
+        error :'var(--error)' ,
+        accent :'var(--accent)',
+      }
     },
   },
   plugins: [nextui()],
